@@ -1,0 +1,170 @@
+@import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap%27);
+@import url('https://fonts.googleapis.com/css2?family=Grechen+Fuemen&display=swap');
+
+*{
+    font-family: "Montserrat";
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0 auto;
+    background-color: #303235;
+}
+
+/* tête de page */
+
+header.header{
+    display: flex;
+    align-items: center;
+    background-color: rgba(0,0,0,0.8);
+}
+
+header.header img{
+    padding-left: 100px;
+    width: 90px;
+}
+
+section.top-page{
+    background: url("fire_force.jpg");
+    background-size: cover;
+    height: 120vh;
+}
+
+/* page de bienvenue (landing page) */
+
+.big-title{
+    font-family: "Grechen Fuemen";
+    padding-left: 50px;
+    padding-top: 80px;
+    text-align: center;
+    color: black;
+    font-size: 110px;
+}
+
+/* menu de navigation */
+
+nav.nav {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 500px;
+    margin-left: 50px;
+    color: white;
+}
+
+nav.nav li a{
+    padding: 26px;
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+nav.nav li a:hover{
+    background-color: rgb(235, 14, 14);
+}
+
+/* présentation */
+
+.title{
+    padding-left: 50px;
+    font-size: 30px;
+    color: white;
+}
+
+.text {
+    display: block;
+    text-align: center;
+    margin: auto;
+    color: white;
+}
+
+.gif{
+    display: block;
+    margin: auto;
+    padding: 40px;
+}
+
+.trait{
+    width: 400px;
+}
+
+/* liens */
+
+.liens{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 50px;
+}
+
+.liens-item{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+}
+
+.delivery-icon-youtube{
+    font-size: 50px;
+    color: white;
+}
+
+.delivery-icon-twitch{
+    font-size: 50px;
+    color: white;
+}
+
+.delivery-icon-discord{
+    font-size: 50px;
+    color: white;
+}
+
+.delivery-icon-twitter{
+    font-size: 50px;
+    color: white;
+}
+
+.delivery-icon{
+    font-size: 50px;
+    color: white;
+}
+
+.delivery-icon-youtube:hover{
+    color: red;
+}
+
+.delivery-icon-twitch:hover{
+    color: #6441a5;
+}
+
+.delivery-icon-discord:hover{
+    color: #7289da;
+}
+
+.delivery-icon-twitter:hover{
+    color: #00aced;
+}
+
+.delivery-icon:hover{
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    background: linear-gradient(45deg, #ffde85 0%, #f7792a 30%, #f7504f 40%, #d82b81 60%, #d82b81 75%, #9536c2 100%);
+}
+
+.liens-details{
+    font-weight: 600;
+    width: 200px;
+    text-align: center;
+}
+
+/* pied de page */
+
+footer{
+    display: flex;
+    padding-left: 100px;
+    background-color: black;
+    color: white;
+}
