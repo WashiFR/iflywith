@@ -28,20 +28,9 @@ header.header img{
 }
 
 section.top-page{
-    background: url("fire_force.jpg");
+    background: url("fire_force.png");
     background-size: cover;
     height: 120vh;
-}
-
-/* page de bienvenue (landing page) */
-
-.big-title{
-    font-family: "Grechen Fuemen";
-    padding-left: 50px;
-    padding-top: 80px;
-    text-align: center;
-    color: black;
-    font-size: 110px;
 }
 
 /* menu de navigation */
