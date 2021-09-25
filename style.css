@@ -1,7 +1,9 @@
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap%27);
 @import url('https://fonts.googleapis.com/css2?family=Grechen+Fuemen&display=swap');
 
-/* page web */
+/*-------------
+    page web 
+---------------*/
 
 *{
     font-family: "Montserrat";
@@ -16,7 +18,9 @@ body{
     background-color: #303235;
 }
 
-/* tête de page */
+/*----------------
+    tête de page 
+------------------*/
 
 header.header{
     display: flex;
@@ -36,7 +40,9 @@ section.top-page{
     height: 95vh;
 }
 
-/* menu de navigation */
+/*----------------------
+    menu de navigation 
+------------------------*/
 
 nav.nav {
     display: flex;
@@ -45,6 +51,7 @@ nav.nav {
     width: 500px;
     margin-left: 50px;
     color: white;
+    flex-wrap: wrap;
 }
 
 nav.nav li a{
@@ -60,7 +67,9 @@ nav.nav li a:hover{
     color: black;
 }
 
-/* présentation */
+/*-----------------
+    présentation 
+-------------------*/
 
 .title{
     text-align: center;
@@ -87,18 +96,22 @@ nav.nav li a:hover{
     width: 400px;
 }
 
-/* liens des réseaux  */
+/*----------------------
+    liens des réseaux  
+------------------------*/
 
 .liens{
     display: flex;
     justify-content: space-evenly;
     margin: 50px;
+    flex-wrap: wrap;
 }
 
 .liens-item{
     display: flex;
     align-items: center;
     flex-direction: column;
+    flex: 1;
 }
 
 .boutton{
@@ -153,7 +166,9 @@ background: linear-gradient(45deg, #ffde85 0%, #f7792a 30%, #f7504f 40%, #d82b81
     font-size: 15px;
 }
 
-/* pied de page */
+/*-----------------
+    pied de page 
+-------------------*/
 
 footer{
     display: flex;
@@ -162,29 +177,76 @@ footer{
     color: white;
 }
 
-/* version mobile */
+/*-------------------
+    version mobile 
+--------------------*/
 
-/* @media all and (max-width: 1024px) {
+@media all and (max-width: 1024px) {
 
+    body{
+        margin: none;
+    }
+    
     header.header{
         flex-direction: column;
     }
 
+    header.header img{
+        border-radius: 50px;
+        margin-left: 0px;
+        width: 50px;
+    }
+
     section.top-page{
-        background-size: cover;
         height: 50vh;
     }
 
-    .gif{
+    nav.nav {
+        justify-content: center;
+        margin-left: 0px;
+    }
+
+    nav.nav li a{
         padding: 10px;
+        font-size: 15px;
+    }
+
+    .title{
+        font-size: 80px;
+    }
+
+    .text {
+        font-size: 15px;
+    }
+
+    .gif{
+        height: 23vh;
+        padding: 0px;
+    }
+
+    .trait{
+        width: 200px;
+    }
+
+    .boutton{
+        height: 40px;
+        width: 40px;
+        border-radius: 50px;
+    }
+    
+    .boutton .icon-youtube, .icon-twitch, .icon-discord, .icon-twitter{
+        height: 40px;
+        width: 40px;
+        border-radius: 50px;
+        line-height: 40px;
+        font-size: 20px;
     }
 
     .liens{
         margin: 30px;
     }
 
-    .liens-details{
-        font-size: 10px;
-        width: 100px;
+    footer{
+        padding-left: 10px;
     }
-} */
+}
