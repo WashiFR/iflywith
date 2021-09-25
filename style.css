@@ -1,6 +1,8 @@
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap%27);
 @import url('https://fonts.googleapis.com/css2?family=Grechen+Fuemen&display=swap');
 
+/* page web */
+
 *{
     font-family: "Montserrat";
 }
@@ -19,18 +21,19 @@ body{
 header.header{
     display: flex;
     align-items: center;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgb(48, 50, 53, 0.8);
 }
 
 header.header img{
-    padding-left: 100px;
+    border-radius: 50px;
+    margin-left: 50px;
     width: 90px;
 }
 
 section.top-page{
-    background: url("fire_force.png");
+    background: url("fond.png");
     background-size: cover;
-    height: 120vh;
+    height: 95vh;
 }
 
 /* menu de navigation */
@@ -45,25 +48,29 @@ nav.nav {
 }
 
 nav.nav li a{
-    padding: 26px;
+    padding: 20px;
     color: white;
     text-decoration: none;
     font-size: 20px;
 }
 
 nav.nav li a:hover{
-    background-color: rgb(235, 14, 14);
+    background-color: white;
+    border-radius: 50px;
+    color: black;
 }
 
 /* présentation */
 
 .title{
-    padding-left: 50px;
-    font-size: 30px;
+    text-align: center;
+    font-size: 150px;
     color: white;
+    font-family: "Grechen Fuemen";
 }
 
 .text {
+    font-size: 25px;
     display: block;
     text-align: center;
     margin: auto;
@@ -80,7 +87,7 @@ nav.nav li a:hover{
     width: 400px;
 }
 
-/* liens */
+/* liens des réseaux  */
 
 .liens{
     display: flex;
@@ -92,61 +99,58 @@ nav.nav li a:hover{
     display: flex;
     align-items: center;
     flex-direction: column;
-    color: white;
 }
 
-.delivery-icon-youtube{
-    font-size: 50px;
-    color: white;
+.boutton{
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    margin: 0 5px;
+    background: white;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0px 10px 10px rgba(0,0,0,0.4);
 }
 
-.delivery-icon-twitch{
-    font-size: 50px;
-    color: white;
+.boutton .icon-youtube, .icon-twitch, .icon-discord, .icon-twitter{
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50px;
+    box-sizing: border-box;
+    line-height: 60px;
+    font-size: 30px;
+    color: black;
 }
 
-.delivery-icon-discord{
-    font-size: 50px;
-    color: white;
+.boutton:hover .icon-youtube{
+    background: red;
+    color: #fff;
+}
+.boutton:hover .icon-twitch{
+    background: #6441a5;
+    color: #fff;
+}
+.boutton:hover .icon-discord{
+    background: #7289da;
+    color: #fff;
+}
+.boutton:hover .icon-twitter{
+    background: #00aced;
+    color: #fff;
 }
 
-.delivery-icon-twitter{
-    font-size: 50px;
-    color: white;
-}
-
-.delivery-icon{
-    font-size: 50px;
-    color: white;
-}
-
-.delivery-icon-youtube:hover{
-    color: red;
-}
-
-.delivery-icon-twitch:hover{
-    color: #6441a5;
-}
-
-.delivery-icon-discord:hover{
-    color: #7289da;
-}
-
-.delivery-icon-twitter:hover{
-    color: #00aced;
-}
-
-.delivery-icon:hover{
-    width: 50px;
-    height: 50px;
-    border-radius: 10px;
-    background: linear-gradient(45deg, #ffde85 0%, #f7792a 30%, #f7504f 40%, #d82b81 60%, #d82b81 75%, #9536c2 100%);
-}
+/*------------------------
+    couleur insta :
+background: linear-gradient(45deg, #ffde85 0%, #f7792a 30%, #f7504f 40%, #d82b81 60%, #d82b81 75%, #9536c2 100%);
+--------------------------*/
 
 .liens-details{
-    font-weight: 600;
+    color: white;
     width: 200px;
     text-align: center;
+    font-size: 15px;
 }
 
 /* pied de page */
@@ -157,3 +161,30 @@ footer{
     background-color: black;
     color: white;
 }
+
+/* version mobile */
+
+/* @media all and (max-width: 1024px) {
+
+    header.header{
+        flex-direction: column;
+    }
+
+    section.top-page{
+        background-size: cover;
+        height: 50vh;
+    }
+
+    .gif{
+        padding: 10px;
+    }
+
+    .liens{
+        margin: 30px;
+    }
+
+    .liens-details{
+        font-size: 10px;
+        width: 100px;
+    }
+} */
