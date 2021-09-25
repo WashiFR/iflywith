@@ -88,6 +88,8 @@ nav.nav li a:hover{
 
 .gif{
     display: block;
+    max-width: 100%;
+    height: auto;
     margin: auto;
     padding: 40px;
 }
@@ -220,7 +222,6 @@ footer{
     }
 
     .gif{
-        height: 20vh;
         padding: 0px;
     }
 
