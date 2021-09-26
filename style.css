@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap%27);
 @import url('https://fonts.googleapis.com/css2?family=Grechen+Fuemen&display=swap');
 
-/*-------------
+/*--------------
     page web 
 ---------------*/
 
@@ -18,7 +18,7 @@ body{
     background-color: #303235;
 }
 
-/*----------------
+/*-----------------
     tête de page 
 ------------------*/
 
@@ -40,7 +40,7 @@ section.top-page{
     height: 95vh;
 }
 
-/*----------------------
+/*-----------------------
     menu de navigation 
 ------------------------*/
 
@@ -67,7 +67,7 @@ nav.nav li a:hover{
     color: black;
 }
 
-/*-----------------
+/*------------------
     présentation 
 -------------------*/
 
@@ -98,7 +98,7 @@ nav.nav li a:hover{
     width: 400px;
 }
 
-/*----------------------
+/*-----------------------
     liens des réseaux  
 ------------------------*/
 
@@ -156,7 +156,7 @@ nav.nav li a:hover{
     color: #fff;
 }
 
-/*------------------------
+/*-------------------------
     couleur insta :
 background: linear-gradient(45deg, #ffde85 0%, #f7792a 30%, #f7504f 40%, #d82b81 60%, #d82b81 75%, #9536c2 100%);
 --------------------------*/
@@ -168,7 +168,7 @@ background: linear-gradient(45deg, #ffde85 0%, #f7792a 30%, #f7504f 40%, #d82b81
     font-size: 15px;
 }
 
-/*-----------------
+/*------------------
     pied de page 
 -------------------*/
 
@@ -183,14 +183,10 @@ footer{
     version mobile 
 --------------------*/
 
-@media all and (max-width: 1024px) {
+@media all and (max-width: 768px) {
 
     body{
         margin: none;
-    }
-    
-    header.header{
-        flex-direction: column;
     }
 
     header.header img{
@@ -200,7 +196,7 @@ footer{
     }
 
     section.top-page{
-        height: 50vh;
+        height: 40vh;
     }
 
     nav.nav {
