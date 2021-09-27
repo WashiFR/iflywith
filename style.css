@@ -48,14 +48,14 @@ nav.nav {
     display: flex;
     justify-content: space-between;
     list-style: none;
-    width: 500px;
-    margin-left: 50px;
+    width: 400px;
+    margin-left: 30px;
     color: white;
     flex-wrap: wrap;
 }
 
 nav.nav li a{
-    padding: 20px;
+    padding: 10px;
     color: white;
     text-decoration: none;
     font-size: 20px;
@@ -63,7 +63,7 @@ nav.nav li a{
 
 nav.nav li a:hover{
     background-color: white;
-    border-radius: 50px;
+    border-radius: 10px;
     color: black;
 }
 
