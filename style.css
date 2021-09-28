@@ -48,9 +48,8 @@ nav.nav {
     display: flex;
     justify-content: space-between;
     list-style: none;
-    width: 400px;
+    width: 450px;
     margin-left: 30px;
-    color: white;
     flex-wrap: wrap;
 }
 
@@ -59,12 +58,20 @@ nav.nav li a{
     color: white;
     text-decoration: none;
     font-size: 20px;
+    transition: ease-out 0.5s;
+    border-radius: 10px;
 }
 
 nav.nav li a:hover{
-    background-color: white;
-    border-radius: 10px;
     color: black;
+    box-shadow: inset 300px 0 0 0 white;
+}
+
+nav.nav .barre{
+    display: block;
+    height: 25px;
+    width: 3px;
+    background-color: white;
 }
 
 /*------------------
@@ -96,6 +103,8 @@ nav.nav li a:hover{
 
 .trait{
     width: 400px;
+    height: 1px;
+    background-color: white;
 }
 
 /*-----------------------
@@ -137,22 +146,27 @@ nav.nav li a:hover{
     line-height: 60px;
     font-size: 30px;
     color: black;
+    transition: background-color 1s ease-out 100ms;
 }
 
 .boutton:hover .icon-youtube{
     background: red;
+    transition: background-color 1s ease-out;
     color: #fff;
 }
 .boutton:hover .icon-twitch{
     background: #6441a5;
+    transition: background-color 1s ease-out;
     color: #fff;
 }
 .boutton:hover .icon-discord{
     background: #7289da;
+    transition: background-color 1s ease-out;
     color: #fff;
 }
 .boutton:hover .icon-twitter{
     background: #00aced;
+    transition: background-color 1s ease-out;
     color: #fff;
 }
 
