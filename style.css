@@ -35,7 +35,7 @@ header.header img{
 }
 
 section.top-page{
-    background: url("fond.png");
+    background: url("banniere.png");
     background-size: cover;
     height: 95vh;
 }
@@ -78,11 +78,15 @@ nav.nav .barre{
     présentation 
 -------------------*/
 
-.title{
+/* .title{
     text-align: center;
     font-size: 150px;
     color: white;
     font-family: "Grechen Fuemen";
+} */
+
+.live {
+    text-align: center;
 }
 
 .text {

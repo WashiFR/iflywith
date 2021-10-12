@@ -26,9 +26,35 @@
                 <li><a href="https://streamlabs.com/teamifw/tip"><i class="fas fa-coins"></i> Donations</a></li>
             </nav>
         </header>
-        <div>
-            <h1 class="title">I Fly With</h1>
-        </div>
+
+        <!-- Add a placeholder for the Twitch embed
+        <div class="live" id="twitch-embed"></div>
+
+        Load the Twitch embed JavaScript file
+        <script src="https://player.twitch.tv/js/embed/v1.js"></script>
+
+        Create a Twitch.Embed object that will render within the "twitch-embed" element
+        <script type="text/javascript">
+        new Twitch.Embed("twitch-embed", {
+            width: 954,
+            height: 378,
+            channel: "teamifw",
+        });
+        </script> -->
+
+        <iframe class="live"
+            src="https://player.twitch.tv/?channel=teamifw&parent=streamernews.example.com&muted=true"
+            height="400"
+            width="600"
+            allowfullscreen="true">
+        </iframe>
+        <iframe class="chat"
+            id="chat_embed"
+            src="https://www.twitch.tv/embed/teamifw/chat?parent=www.example.com"
+            height="400"
+            width="300">
+        </iframe>
+
     </section>
 
     <!-------------------------
