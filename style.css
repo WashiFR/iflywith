@@ -35,7 +35,7 @@ header.header img{
 }
 
 section.top-page{
-    background: url("banniere.png");
+    background: url("fond.png");
     background-size: cover;
     height: 95vh;
 }
