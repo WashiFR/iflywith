@@ -31,7 +31,7 @@ header.header{
 header.header img{
     border-radius: 50px;
     margin-left: 50px;
-    width: 80px;
+    width: 60px;
 }
 
 section.top-page{
@@ -67,30 +67,12 @@ nav.nav li a:hover{
     box-shadow: inset 300px 0 0 0 white;
 }
 
-nav.nav .barre{
-    display: block;
-    height: 25px;
-    width: 3px;
-    background-color: white;
-}
-
 /*------------------
     présentation 
 -------------------*/
 
-/* .title{
-    text-align: center;
-    font-size: 150px;
-    color: white;
-    font-family: "Grechen Fuemen";
-} */
-
-.live {
-    text-align: center;
-}
-
 .text {
-    font-size: 25px;
+    font-size: 30px;
     display: block;
     text-align: center;
     margin: auto;
@@ -102,88 +84,75 @@ nav.nav .barre{
     max-width: 100%;
     height: auto;
     margin: auto;
-    padding: 40px;
+    padding: 100px 0px 70px 0px;
 }
 
-.trait{
-    width: 400px;
-    height: 1px;
-    background-color: white;
+section.streaming{
+    background-color: black;
+    background-size: cover;
+    height: 77vh;
+}
+
+.live {
+    text-align: center;
 }
 
 /*-----------------------
     liens des réseaux  
 ------------------------*/
 
-.liens{
+.social-menu ul {
     display: flex;
-    justify-content: space-evenly;
-    margin: 50px;
+    justify-content: space-between;
     flex-wrap: wrap;
+    margin: 50px;
 }
-
-.liens-item{
+.social-menu ul li {
     display: flex;
     align-items: center;
     flex-direction: column;
     flex: 1;
 }
-
-.boutton{
-    display: inline-block;
-    height: 60px;
-    width: 60px;
-    margin: 0 5px;
-    background: white;
-    border-radius: 50px;
-    cursor: pointer;
-    box-shadow: 0px 10px 10px rgba(0,0,0,0.4);
-}
-
-.boutton .icon-youtube, .icon-twitch, .icon-discord, .icon-twitter{
-    display: inline-block;
-    height: 60px;
-    width: 60px;
-    text-align: center;
-    border-radius: 50px;
-    box-sizing: border-box;
-    line-height: 60px;
+.social-menu ul li .icon-twitter, .icon-discord, .icon-youtube {
+    color: #000000;
     font-size: 30px;
-    color: black;
-    transition: background-color 1s ease-out 100ms;
+    line-height: 50px;
+    transition: .5s;
+    padding: 15px;
+}
+.social-menu ul li .icon-twitter:hover, .icon-discord:hover, .icon-youtube:hover {
+    color: #ffffff;
+}
+.social-menu ul li a {
+    position: relative;
+    display: block;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    background-color: white;
+    text-align: center;
+    transition: 0.5s;
+    transform: translate(0,0px);
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+}
+.social-menu ul li a:hover {
+    transform: rotate(0deg) skew(0deg) translate(0, -10px);
+}
+.social-menu ul div:nth-child(1) a:hover {
+    background-color: #cd201f;
+}
+.social-menu ul div:nth-child(2) a:hover {
+    background-color: #55acee;
+}
+.social-menu ul div:nth-child(3) a:hover {
+    background-color: #7289da;
 }
 
-.boutton:hover .icon-youtube{
-    background: red;
-    transition: background-color 1s ease-out;
-    color: #fff;
-}
-.boutton:hover .icon-twitch{
-    background: #6441a5;
-    transition: background-color 1s ease-out;
-    color: #fff;
-}
-.boutton:hover .icon-discord{
-    background: #7289da;
-    transition: background-color 1s ease-out;
-    color: #fff;
-}
-.boutton:hover .icon-twitter{
-    background: #00aced;
-    transition: background-color 1s ease-out;
-    color: #fff;
-}
-
-/*-------------------------
-    couleur insta :
-background: linear-gradient(45deg, #ffde85 0%, #f7792a 30%, #f7504f 40%, #d82b81 60%, #d82b81 75%, #9536c2 100%);
---------------------------*/
-
-.liens-details{
+.lien-detail{
     color: white;
+    font-size: 17px;
     width: 200px;
     text-align: center;
-    font-size: 15px;
 }
 
 /*------------------
@@ -192,9 +161,29 @@ background: linear-gradient(45deg, #ffde85 0%, #f7792a 30%, #f7504f 40%, #d82b81
 
 footer{
     display: flex;
-    padding-left: 100px;
+    align-items: center;
     background-color: black;
     color: white;
+}
+
+.copyright{
+    padding: 0px 30px 0px 100px;
+}
+
+footer .boutton{
+    border-radius: 10px;
+    cursor: pointer;
+    height: 30px;
+    width: 30px;
+    margin-right: 100px;
+    background: linear-gradient(45deg, #ffde85 0%, #f7792a 30%, #f7504f 40%, #d82b81 60%, #d82b81 75%, #9536c2 100%);
+}
+
+footer .icon-insta{
+    display: inline-block;
+    color: black;
+    padding: 2px 4px;
+    font-size: 25px;
 }
 
 /*-------------------
@@ -239,28 +228,6 @@ footer{
     .gif{
         margin-bottom: 20px;
         padding: 0px;
-    }
-
-    .trait{
-        width: 200px;
-    }
-
-    .boutton{
-        height: 40px;
-        width: 40px;
-        border-radius: 50px;
-    }
-    
-    .boutton .icon-youtube, .icon-twitch, .icon-discord, .icon-twitter{
-        height: 40px;
-        width: 40px;
-        border-radius: 50px;
-        line-height: 40px;
-        font-size: 20px;
-    }
-
-    .liens{
-        margin: 30px;
     }
 
     footer{
