@@ -101,29 +101,29 @@ section.streaming{
     liens des réseaux  
 ------------------------*/
 
-.social-menu ul {
+.social ul {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 50px;
 }
-.social-menu ul li {
+.social ul li {
     display: flex;
     align-items: center;
     flex-direction: column;
     flex: 1;
 }
-.social-menu ul li .icon-twitter, .icon-discord, .icon-youtube {
+.social ul li .icon-twitter, .icon-discord, .icon-youtube {
     color: #000000;
     font-size: 30px;
     line-height: 50px;
     transition: .5s;
     padding: 15px;
 }
-.social-menu ul li .icon-twitter:hover, .icon-discord:hover, .icon-youtube:hover {
+.social ul li .icon-twitter:hover, .icon-discord:hover, .icon-youtube:hover {
     color: #ffffff;
 }
-.social-menu ul li a {
+.social ul li a {
     position: relative;
     display: block;
     width: 60px;
@@ -135,16 +135,16 @@ section.streaming{
     transform: translate(0,0px);
     box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
 }
-.social-menu ul li a:hover {
+.social ul li a:hover {
     transform: rotate(0deg) skew(0deg) translate(0, -10px);
 }
-.social-menu ul div:nth-child(1) a:hover {
+.social ul div:nth-child(1) a:hover {
     background-color: #cd201f;
 }
-.social-menu ul div:nth-child(2) a:hover {
+.social ul div:nth-child(2) a:hover {
     background-color: #55acee;
 }
-.social-menu ul div:nth-child(3) a:hover {
+.social ul div:nth-child(3) a:hover {
     background-color: #7289da;
 }
 
@@ -176,6 +176,10 @@ footer .boutton{
     height: 30px;
     width: 30px;
     margin-right: 100px;
+    background-color: white;
+}
+
+footer .boutton:hover{
     background: linear-gradient(45deg, #ffde85 0%, #f7792a 30%, #f7504f 40%, #d82b81 60%, #d82b81 75%, #9536c2 100%);
 }
 
@@ -184,6 +188,10 @@ footer .icon-insta{
     color: black;
     padding: 2px 4px;
     font-size: 25px;
+}
+
+footer .icon-insta:hover{
+    color: white;
 }
 
 /*-------------------
