@@ -24,13 +24,12 @@ body{
 
 header.header{
     display: flex;
-    align-items: center;
-    background-color: rgb(48, 50, 53, 0.8);
+    background-color: #303235;
 }
 
 header.header img{
     border-radius: 50px;
-    margin-left: 50px;
+    margin: 8px 0 0 50px;
     width: 60px;
 }
 
@@ -44,27 +43,63 @@ section.top-page{
     menu de navigation 
 ------------------------*/
 
-nav.nav {
-    display: flex;
-    justify-content: space-between;
+nav {
     list-style: none;
-    width: 450px;
     margin-left: 30px;
     flex-wrap: wrap;
+    height: 80px;
+    width: 100%;
 }
 
-nav.nav li a{
-    padding: 10px;
+label.logo{
+    color: white;
+    font-size: 35px;
+    line-height: 80px;
+    padding: 0 10px;
+    font-weight: bold;
+}
+
+nav ul{
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    float: right;
+    margin-right: 50px;
+}
+
+nav ul li{
+    display: inline-block;
+    margin: 5px 5px;
+  }
+
+nav ul li a{
+    position: relative;
+    display: block;
+    padding: 5px;
     color: white;
     text-decoration: none;
     font-size: 20px;
-    transition: ease-out 0.5s;
-    border-radius: 10px;
+    transition: 0.5s;
 }
 
-nav.nav li a:hover{
-    color: black;
-    box-shadow: inset 300px 0 0 0 white;
+/* Barre en dessous text */
+
+nav ul li a::after {
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: white;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+}
+
+nav ul li a:hover::after{
+    transform: scaleX(1);
+    transform-origin: left
 }
 
 /*------------------
@@ -84,13 +119,13 @@ nav.nav li a:hover{
     max-width: 100%;
     height: auto;
     margin: auto;
-    padding: 100px 0px 70px 0px;
+    padding: 100px 0px 40px 0px;
 }
 
 section.streaming{
     background-color: black;
-    background-size: cover;
-    height: 77vh;
+    width: 1254;
+    height: 478;
 }
 
 .live {
@@ -214,12 +249,12 @@ footer .icon-insta:hover{
         height: 40vh;
     }
 
-    nav.nav {
+    nav {
         justify-content: center;
         margin-left: 0px;
     }
 
-    nav.nav li a{
+    nav ul li a{
         padding: 10px;
         font-size: 15px;
     }
