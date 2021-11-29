@@ -16,15 +16,40 @@
     -------------------------->
 
     <section class="top-page">
-        <header class="header" id="menu">
+        <!-- <header class="header" id="navbar">
             <img src="logo.jpg" alt="logo">
             <nav>
                 <a href="index.html" class="logo">I Fly With</a>
-                <ul>
+                <ul class="menu" id="myTopnav">
                     <li><a href="index.html"><i class="fas fa-home"></i> Accueil</a></li>
                     <li><a href="#liens"><i class="fab fa-twitter"></i> Réseaux</a></li>
                     <li><a href="https://streamlabs.com/teamifw/tip"><i class="fas fa-coins"></i> Donations</a></li>
                 </ul>
+            </nav>
+        </header> -->
+
+        <header class="header">
+            <nav class="navbar">
+                <div class="nav-logo">
+                    <img src="logo.jpg" alt="logo">
+                    <a href="#" class="nav-logo2">I Fly With</a>
+                </div>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#liens" class="nav-link"><i class="fab fa-twitter"></i> Réseaux</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="https://streamlabs.com/teamifw/tip" class="nav-link"><i class="fas fa-coins"></i> Donations</a>
+                    </li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
             </nav>
         </header>
 
@@ -34,7 +59,7 @@
     
         <section class="presentaion">
             <img class="gif" src="https://media.giphy.com/media/lIzAEoZEn571u/giphy.gif" alt="hello">
-            <p class="text">Hey ! on est une team qui joue principalement a lol, <br> pour le fun et pour tryhard, mais aussi à d'autres jeux. <br> J'espère que vous aimerez nos aventures.</p>
+            <p class="text">Hey ! on est une team qui joue principalement a lol, <br> pour le fun et pour tryhard, mais aussi à d'autres jeux. <br> On espère que vous aimerez nos aventures.</p>
         </section>
 
     </section>
@@ -44,20 +69,43 @@
     -------------------------->
 
     <section class="streaming">
-        <!-- Add a placeholder for the Twitch embed -->
-        <div class="live" id="twitch-embed"></div>
+        <!-- <div class="twitch-stream"></div>
+            <div class="live" id="twitch-embed"></div>
 
-        <!-- Load the Twitch embed JavaScript file -->
-        <script src="https://player.twitch.tv/js/embed/v1.js"></script>
+            <script src="https://player.twitch.tv/js/embed/v1.js"></script>
 
-        <!-- Create a Twitch.Embed object that will render within the "twitch-embed" element -->
-        <script type="text/javascript">
-        new Twitch.Embed("twitch-embed", {
-            width: 1254,
-            height: 478,
-            channel: "teamifw",
-        });
-        </script>
+            <script type="text/javascript">
+            new Twitch.Embed("twitch-embed", {
+                width: "100%",
+                height: 478,
+                theme: "dark",
+                channel: "teamifw",
+            });
+            </script>
+        </div> -->
+
+        <div class="twitch">
+            <div class="twitch-video">
+              <iframe
+                src="https://player.twitch.tv/?channel=teamifw&parent=philna.sh&autoplay=false"
+                frameborder="0"
+                scrolling="no"
+                allowfullscreen="true"
+                height="100%"
+                width="100%">
+              </iframe>
+            </div>
+            <div class="twitch-chat">
+              <iframe
+                frameborder="0"
+                scrolling="no"
+                src="https://www.twitch.tv/embed/teamifw/chat?parent=philna.sh"
+                height="100%"
+                width="100%">
+              </iframe>
+            </div>
+          </div>
+          
     </section>
 
     <!----------------------
@@ -65,22 +113,20 @@
     ----------------------->
 
     <section class="social_network" id="liens">
-        <div class="social">
-            <ul>
-                <div>
-                    <li><a href="https://www.youtube.com/channel/UCiWtNFQLOLirjII95OM3EEg"><i class="fab fa-youtube icon-youtube"></i></a></li>
-                    <p class="lien-detail">Abonne toi à notre chaîne Youtube !</p>
-                </div>
-                <div>
-                    <li><a href="https://twitter.com/LamaLeo1"><i class="fab fa-twitter icon-twitter"></i></a></li>
-                    <p class="lien-detail">Suis nous sur Twitter</p>
-                </div>
-                <div>
-                    <li><a href="https://discord.gg/JNPpYjkC"><i class="fab fa-discord icon-discord"></i></a></li>
-                    <p class="lien-detail">Et rejoins notre Discord !</p>
-                </div>
-            </ul>
-          </div>
+        <ul class="social">
+            <div>
+                <li><a href="https://www.youtube.com/channel/UCiWtNFQLOLirjII95OM3EEg"><i class="fab fa-youtube icon-youtube"></i></a></li>
+                <p class="lien-detail">Abonne toi à notre chaîne Youtube !</p>
+            </div>
+            <div>
+                <li><a href="https://twitter.com/LamaLeo1"><i class="fab fa-twitter icon-twitter"></i></a></li>
+                <p class="lien-detail">Suis nous sur Twitter</p>
+            </div>
+            <div>
+                <li><a href="https://discord.gg/JNPpYjkC"><i class="fab fa-discord icon-discord"></i></a></li>
+                <p class="lien-detail">Et rejoins notre Discord !</p>
+            </div>
+        </ul>
     </section>
 
     <!-------------------------
@@ -93,4 +139,5 @@
     </footer>
     
 </body>
+<script src="main.js"></script>
 </html>

@@ -1,11 +1,12 @@
 @import url(https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap%27);
-@import url('https://fonts.googleapis.com/css2?family=Grechen+Fuemen&display=swap');
 
 /*--------------
     page web 
 ---------------*/
 
 *{
+    margin: 0;
+    padding: 0;
     font-family: "Montserrat";
 }
 
@@ -14,7 +15,6 @@ html{
 }
 
 body{
-    margin: 0 auto;
     background-color: #303235;
 }
 
@@ -22,7 +22,102 @@ body{
     tête de page 
 ------------------*/
 
-header.header{
+section.top-page{
+    background: url("fond.png");
+    background-size: cover;
+    height: 95vh;
+}
+
+nav{
+    position: fixed;
+    z-index: 5;
+    width: 100%;
+    background-color: #303235;
+}
+
+nav li {
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+}
+
+.nav-logo {
+    display: flex;
+    padding-left: 100px;
+}
+
+.nav-logo2 {
+    display: flex;
+    padding-left: 10px;
+    font-size: 30px;
+    color: white;
+    align-items: center;
+}
+
+.header img{
+    border-radius: 50px;
+    width: 60px;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+}
+
+.nav-menu {
+    display: flex;
+    margin-right: 50px;
+}
+
+.nav-item {
+    margin-left: 1rem;
+}
+
+.nav-link{
+    position: relative;
+    display: block;
+    padding: 0 5px 5px 5px;
+    font-size: 20px;
+    color: white;
+}
+
+.nav-link::after{
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: white;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.5s;
+}
+
+.nav-link:hover::after{
+    transform: scaleX(1);
+    transform-origin: left
+}
+
+/* header.header{
     display: flex;
     background-color: #303235;
 }
@@ -37,13 +132,13 @@ section.top-page{
     background: url("fond.png");
     background-size: cover;
     height: 95vh;
-}
+} */
 
 /*-----------------------
     menu de navigation 
 ------------------------*/
 
-nav {
+/* nav {
     list-style: none;
     margin-left: 5px;
     flex-wrap: wrap;
@@ -65,6 +160,7 @@ nav ul{
     box-sizing: border-box;
     float: right;
     margin-right: 50px;
+    overflow: hidden;
 }
 
 nav ul li{
@@ -81,8 +177,6 @@ nav ul li a{
     font-size: 20px;
     transition: 0.5s;
 }
-
-/* Barre en dessous text */
 
 nav ul li a::after {
     position: absolute;
@@ -102,10 +196,10 @@ nav ul li a:hover::after{
     transform-origin: left
 }
 
-#menu {
+#navbar {
     position: fixed;
     width: 100%;
-}
+} */
 
 /*------------------
     présentation 
@@ -122,48 +216,79 @@ nav ul li a:hover::after{
 .gif{
     display: block;
     max-width: 100%;
-    height: auto;
     margin: auto;
     padding: 170px 0px 40px 0px;
 }
 
-section.streaming{
-    background-color: black;
-    width: 100%;
-    height: 478;
+.twitch .twitch-video {
+    padding-top: 56.25%;
+    position: relative;
+    height: 0;
 }
 
-.live {
-    text-align: center;
+.twitch .twitch-video iframe {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
 }
+
+.twitch .twitch-chat {
+    height: 400px;
+}
+
+.twitch .twitch-chat iframe {
+    width: 100%;
+    height: 100%;
+}
+
+@media screen and (min-width: 850px) {
+    .twitch {
+        position: relative;
+    }
+
+    .twitch .twitch-video {
+        width: 75%;
+        padding-top: 42.1875%;
+    }
+
+    .twitch .twitch-chat {
+        width: 25%;
+        height: auto;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+    }
+}
+  
 
 /*-----------------------
     liens des réseaux  
 ------------------------*/
 
-.social ul {
+.social {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     margin: 50px;
 }
-.social ul li {
+.social li {
     display: flex;
     align-items: center;
     flex-direction: column;
-    flex: 1;
 }
-.social ul li .icon-twitter, .icon-discord, .icon-youtube {
+.social li .icon-twitter, .icon-discord, .icon-youtube {
     color: #000000;
     font-size: 30px;
     line-height: 50px;
     transition: .5s;
     padding: 15px;
 }
-.social ul li .icon-twitter:hover, .icon-discord:hover, .icon-youtube:hover {
+.social li .icon-twitter:hover, .icon-discord:hover, .icon-youtube:hover {
     color: #ffffff;
 }
-.social ul li a {
+.social li a {
     position: relative;
     display: block;
     width: 60px;
@@ -175,23 +300,24 @@ section.streaming{
     transform: translate(0,0px);
     box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
 }
-.social ul li a:hover {
+.social li a:hover {
     transform: rotate(0deg) skew(0deg) translate(0, -10px);
 }
-.social ul div:nth-child(1) a:hover {
+.social div:nth-child(1) a:hover {
     background-color: #cd201f;
 }
-.social ul div:nth-child(2) a:hover {
+.social div:nth-child(2) a:hover {
     background-color: #55acee;
 }
-.social ul div:nth-child(3) a:hover {
+.social div:nth-child(3) a:hover {
     background-color: #7289da;
 }
 
 .lien-detail{
+    padding: 10px;
     color: white;
     font-size: 17px;
-    width: 200px;
+    width: 300px;
     text-align: center;
 }
 
@@ -202,11 +328,13 @@ section.streaming{
 footer{
     display: flex;
     align-items: center;
+    height: 50px;
     background-color: black;
     color: white;
 }
 
 .copyright{
+    font-size: 20px;
     padding: 0px 30px 0px 100px;
 }
 
@@ -238,47 +366,82 @@ footer .icon-insta:hover{
     version mobile 
 --------------------*/
 
-@media all and (max-width: 768px) {
+@media only screen and (max-width: 768px) {
 
-    body{
-        margin: none;
+    nav{
+        position: fixed;
+        width: 100%;
     }
 
-    header.header img{
-        border-radius: 50px;
-        margin-left: 20px;
-        width: 50px;
+    .nav-menu {
+        position: fixed;
+        border-top: 2px solid white;
+        border-bottom: 2px solid white;
+        left: -100%;
+        top: 4.4rem;
+        flex-direction: column;
+        background-color: black;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
     }
 
-    section.top-page{
-        height: 40vh;
+    .nav-menu.active {
+        left: 0;
     }
 
-    nav {
-        justify-content: center;
-        margin-left: 0px;
+    .nav-logo {
+        padding-left: 10px;
     }
 
-    nav ul li a{
+    .nav-item {
+        margin: 1rem;
+    }
+
+    .nav-link{
         padding: 10px;
-        font-size: 15px;
     }
 
-    .title{
-        font-size: 80px;
+    .nav-link:hover{
+        background-color: #303235;
+        border: 2px solid white;
+    }
+
+    .nav-link::after{
+        display: none;
+    }
+    
+    .nav-link:hover::after{
+        display: none;
+    }
+
+    .hamburger {
+        padding-right: 15px;
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        -webkit-transform: translateY(8px) rotate(45deg);
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        -webkit-transform: translateY(-8px) rotate(-45deg);
+        transform: translateY(-8px) rotate(-45deg);
     }
 
     .text {
-        font-size: 15px;
-        padding: 5px;
+        font-size: 25px;
     }
-
+    
     .gif{
-        margin-bottom: 20px;
-        padding: 0px;
-    }
-
-    footer{
-        padding-left: 10px;
+        padding-top: 100px;
     }
 }
