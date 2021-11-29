@@ -401,4 +401,13 @@ footer .icon-insta:hover{
     .gif{
         padding-top: 100px;
     }
+
+    .social li a:hover {
+        transform: rotate(0deg) skew(0deg) translate(0, 0px);
+    }
+
+    .copyright{
+        font-size: 15px;
+        padding: 0px 20px 0px 40px;
+    }
 }
